@@ -1,0 +1,510 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+body {
+    background: linear-gradient(180deg, #757575, #bdbdbd); 
+    color: #333;
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.6;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/light-texture.png'); 
+    opacity: 0.05; 
+    z-index: -1;
+}
+
+.Top{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(33,33,33,0.7), rgba(33,33,33,0.7)), url(images/pngtree-traffic-jams-in-bangalore-picture-image_2771493.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 200px;
+    border-radius: 5px;
+    
+}
+
+.links{
+    flex: 1;
+    text-align: right;
+}
+
+.links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.links ul li a{
+    color: #f57c00; /* Vibrant orange to stand out against the dark background */
+    text-decoration: none;
+    font-size: larger;
+    font-family: Helvetica;
+}
+
+.links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #bf360c; /* Dark red for a subtle yet noticeable hover effect */
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.links ul li:hover::after{
+    width: 100%;
+}
+
+.text{
+    width: 90%;
+    color: #fffde7; /* Light yellow for readability */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text h1{
+    font-size: 60px;
+    font-weight:900;
+}
+
+.text p{
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.btnns{
+    display: inline-block;
+    text-decoration:none;
+    margin-top: 20px;
+    color: #ffccbc; /* Light red for button text */
+    border: 1px solid #ffffff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: #6d4c41; /* Dark brown mimicking the bus colors */
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btnns:hover{
+    border: 1px solid #ffe0b2; /* Hover effect with a brighter color */
+    background-color: #3e2723; /* Darker brown on hover */
+}
+
+
+.dscc{
+    margin-top: 40px;
+}
+/* Background styling for the "What We Do" section */
+.desc {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 80px;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9); /* Smooth pastel gradient */
+    border-radius: 20px; /* Rounded edges for modern style */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add subtle, decorative background elements */
+.desc::before, .desc::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 87, 34, 0.1); /* Soft, translucent orange for aesthetics */
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+}
+.desc::before {
+    top: -150px;
+    left: -150px;
+}
+.desc::after {
+    bottom: -150px;
+    right: -150px;
+}
+
+/* Styling for the "What We Do" heading */
+.desc h1 {
+    font-size: 55px;
+    font-weight: 800;
+    color: #2c3e50; /* Darker color for contrast */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+}
+
+/* Decorative line below heading */
+.desc h1::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #ff7043; /* Bright accent color */
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* Text paragraph styling */
+.desc p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+/* Column styling */
+.row {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 30%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05); /* Soft shadow for modern look */
+    padding: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.col:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.col h3 {
+    font-size: 22px;
+    color: #34495e;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.col p {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.desc h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 80px;
+}
+.desc h3{
+    font-size: 25px;
+}
+
+.desc p{
+    color: #777777;
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: 300;
+    padding: 10px;
+}
+.row{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.h3{
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+.facilities{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding-top: 100px;
+    background: linear-gradient(145deg, #eceff1, #cfd8dc); /* Subtle gradient for a clean, modern background */
+    border-radius: 20px; /* Rounded corners for a softer look */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1); /* Adds depth with shadow */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.facilities h1{
+    font-size: 45px;
+    color: #37474f; /* Deep charcoal for a bold statement */
+    margin-bottom: 20px; /* Spacing below the header */
+    text-transform: uppercase; /* Making header text uppercase for a modern look */
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+.facilities:hover {
+    transform: translateY(-10px); /* Subtle lift effect when the mouse hovers over the section */
+    background: linear-gradient(145deg, #cfd8dc, #eceff1); /* Inverted gradient on hover for a dynamic visual effect */
+}
+
+.row1{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px; /* Adds space between columns */
+}
+
+.colu {
+    width: 500px;
+    background-color: #fffde7; /* Soft yellow for a warm feel */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 20px;
+    transition: transform 0.5s ease; /* Smooth transition for hover effects */
+}
+
+.colu:hover{
+    transform: scale(1.1); /* Scale up effect to make the column pop out on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increased shadow for a dramatic effect */
+}
+
+.cont{
+    padding: 16px;
+}
+
+.cont h3{
+    font-size: 23px;
+    color: #455a64; /* Dark slate color for the headings */
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.cont p{
+    color: #666;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 10px; /* Padding for text content */
+    text-align: justify; /* Justifying text for better readability */
+}
+
+.colu img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.map{
+    display: flex;
+    justify-content: center;
+    padding: 50px; /* Provides spacing around the map container */
+    background: #5d5e5e; /* Light grey background for contrast */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    margin: 50px auto; /* Centering the map and adding vertical space */
+}
+
+.maps{
+    border: none; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
+}
+
+.maps:hover{
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
+}
+
+.testimonial {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+.testimonial h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.testimonial p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between columns */
+}
+
+.testimonial-col {
+    flex: 1;
+    max-width: 300px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for scaling and shadow */
+}
+
+.testimonial-col:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.testimonial-col img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.testimonial-col h3 {
+    font-size: 18px;
+    color: #34495e;
+    font-weight: bold;
+}
+
+.testimonial-col p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
